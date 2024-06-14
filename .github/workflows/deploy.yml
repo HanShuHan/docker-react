@@ -27,9 +27,9 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: ${{ variables.APPLICATION_NAME }}
-          environment_name: ${{ variables.ENVIRONMENT_NAME }}
-          existing_bucket_name: ${{ variables.EXISTING_BUCKET_NAME }}
-          region: ${{ variables.REGION }}
+          application_name: ${{ env.APPLICATION_NAME }}
+          environment_name: ${{ env.ENVIRONMENT_NAME }}
+          existing_bucket_name: ${{ env.EXISTING_BUCKET_NAME }}
+          region: ${{ env.REGION }}
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
